@@ -3,6 +3,7 @@
 
 #==========================================================
 basepath=$(cd `dirname $0`; pwd)
+export PATH="$PWD/brandy/gcc-linaro/bin":"$PATH"
 
 if [ "${1}" = "" ]; then
 	echo "USAGE: sudo ./build_mainline_uboot.sh [2|pc|plus|lite|pc-plus|one|plus2e|zero]"
@@ -53,7 +54,3 @@ cp -rf u-boot-sunxi-with-spl.bin ../../../OrangePi-BuildLinux/orange
 cp -rf boot.scr orangepi.cmd ../../../
 cd ../../../
 mv  boot.scr orangepi.cmd ./OrangePi-BuildLinux/orange
-
-
-
-
